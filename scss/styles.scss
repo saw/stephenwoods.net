@@ -1,9 +1,34 @@
 @import 'node_modules/normalize-scss/sass/_normalize';
 @include normalize();
 
-body {
+html {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
-	.vcard {
-		color: blue;
+
+body {
+	text-align: center;
+}
+
+.content {
+	text-align: left;
+	margin: auto;
+	padding: 0 1rem;
+	font-size: 1.5rem;
+
+	@media only screen  and (min-width : 700px) {
+		width: 18rem;
+		font-size: 1rem;
+	}
+
+	a {
+		text-decoration: underline;
+		color: black;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
 	}
 }

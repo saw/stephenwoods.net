@@ -13,8 +13,8 @@ gulp.task('sass', function(){
 gulp.task('default', ['sass'], function() {
     return gulp.src('./*.html')
         .pipe(inlinesource())
-        .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(insert.append('\n<!-- page source at github.com -->\n'))
+        .pipe(htmlmin({collapseWhitespace: true,removeComments: true, useShortDoctype: true, minifyCSS: true}))
+        .pipe(insert.append('\n<!-- page source at github.com/saw/stephenwoods.net -->\n'))
         .pipe(gulp.dest('build/'));
 });
 
